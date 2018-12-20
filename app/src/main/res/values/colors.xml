@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#FF8451</color>
+    <color name="primary_medium">#FFB45C</color>
+    <color name="primary_edittext_light">#FDC98D</color>
+    <color name="primary_text_light">#B37326</color>
+    <color name="primary_edittext_focus">#B08B5D</color>
+    <color name="primary_dark">#4F71BF</color>
+    <color name="primary_light">#7086B9</color>
+    <color name="accent">#CDDC39</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+</resources>

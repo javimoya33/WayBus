@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">WayBus</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Vista Lineas -->
+    <string name="txtNomRuta">Huelva - El Portil</string>
+    <string name="txtNumBus">M-0</string>
+    <string name="txtNomEstacion">Estación autobuses</string>
+    <string name="txtHorario">00:00 - 00:00</string>
+    <string name="txtPrecio">0.00€</string>
+    <string name="txtDiasSemana">LMXJVSD</string>
+
+    <!-- Vista Horarios -->
+    <string name="fraseInicial">¿Qué ruta deseas realizar?</string>
+    <string name="editOrigen">ORIGEN</string>
+    <string name="editDestino">DESTINO</string>
+    <string name="butHorarios">Mostrar</string>
+    <string name="tituloRuta">Origen-Destino</string>
+    <string name="colHoraSalida">Salida-Llegada</string>
+    <string name="colDuracion">Duracion</string>
+    <string name="colPrecio">Precio</string>
+    <string name="colFrecuencia">Frecuencia</string>
+    <string name="msg_horario_vacio">No hay horarios para mostrar</string>
+    <string name="tvEstacion">Estación: </string>
+    <string name="tvLinea">Línea: </string>
+
+    <!-- Vista Mis Paradas -->
+    <string name="btnGuardarRuta">Guardar</string>
+
+    <string name="google_maps_key"></string>
+</resources>

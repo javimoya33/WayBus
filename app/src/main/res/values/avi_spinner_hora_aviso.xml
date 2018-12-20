@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="valores_hora_aviso">
+
+        <item>5min.</item>
+        <item>10min.</item>
+        <item>30min.</item>
+        <item>1hora</item>
+
+    </string-array>
+
+</resources>

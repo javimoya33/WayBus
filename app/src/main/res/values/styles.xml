@@ -1,0 +1,93 @@
+<resources>
+
+    <!-- Tema principal de la aplicación -->
+    <style name="miTemaWayBus" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:background">@color/primary</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="android:textAppearance">@style/textWayBus</item>
+        
+    </style>
+
+    <!-- Tema para el CardView -->
+    <style name="cardViewWayBus" parent="Base.ThemeOverlay.AppCompat.Light">
+
+        <item name="android:background">@color/primary_medium</item>
+        <item name="android:padding">@dimen/cardview_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/cardview_vertical_margin</item>
+
+    </style>
+
+    <style name="tableHorarioWayBus" parent="Base.ThemeOverlay.AppCompat.Light">
+
+        <item name="android:background">@drawable/background_border</item>
+
+    </style>
+
+    <!-- Tema para los TextView -->
+    <style name="textWayBus" parent="TextAppearance.AppCompat.Body1">
+
+        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <!-- Linea divisoria para las tablas -->
+    <style name="divider_table">
+        <item name="android:layout_width">1dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/primary</item>
+    </style>
+
+    <!-- Tema encabezado próximas rutas -->
+    <style name="title_prox_rutas" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/primary_light</item>
+    </style>
+    
+    <style name="miTemaWayBus.NoActionBar">
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+    
+    <style name="MiTema.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <item name="android:background">@color/primary_dark</item>
+
+    </style>
+
+    <style name="MiTema.PopupOverlay" parent="AlertDialog.AppCompat.Light" />
+
+    <!-- Columnas de la tabla de horarios -->
+    <style name="column_table_horario" parent="AlertDialog.AppCompat.Light">
+
+        <item name="android:background">@drawable/background_button</item>
+        <item name="android:shadowColor">@color/primary_medium</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:textColor">@color/primary_medium</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:padding">10dp</item>
+
+    </style>
+
+    <!-- Mensaje de layout de horario vacío -->
+    <style name="msg_horario_vacio" parent="AlertDialog.AppCompat.Light">
+
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:shadowColor">@color/primary_dark</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+</resources>

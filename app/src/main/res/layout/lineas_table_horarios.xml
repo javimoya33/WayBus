@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/primary_dark"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:theme="@style/tableHorarioWayBus"
+        android:weightSum="10">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_clock5" />
+
+        <TextView
+            android:id="@+id/tabHorario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="@string/txtHorario"
+            android:textAppearance="@style/textWayBus" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_ticket5" />
+
+        <TextView
+            android:id="@+id/tabPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="@string/txtPrecio"
+            android:textAppearance="@style/textWayBus" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_calendar5" />
+
+        <TextView
+            android:id="@+id/tabDiasSemana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="@string/txtDiasSemana"
+            android:textAppearance="@style/textWayBus" />
+
+        <ImageButton
+            android:id="@+id/imgAvisos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:background="@drawable/shadow_but_notice"
+            android:src="@drawable/ic_notice3"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleX="0.50"
+            android:scaleY="0.50" />
+
+    </LinearLayout>
+
+</LinearLayout>

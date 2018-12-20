@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CoordinadorLayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Inicio de la AppBar -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/AppBarPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MiTema.AppBarOverlay"
+        android:elevation="5dp">
+
+        <!-- Inicio de la Toolbar -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/ToolbarPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/primary"/>
+        <!-- Fin de la Toolbar -->
+
+        <!-- Inicio de la TabLayout -->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/TabLayoutPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <!-- Fin de la TabLayout -->
+
+    </android.support.design.widget.AppBarLayout>
+    <!-- Fin de la AppBar -->
+
+    <!-- Inicio del ViewPager -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/ViewPagerPrincipal"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!-- Fin del ViewPager -->
+
+</android.support.design.widget.CoordinatorLayout>

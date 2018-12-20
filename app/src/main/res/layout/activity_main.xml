@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordPlano"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Inicio de la AppBar -->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/AppBarPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/MiTema.AppBarOverlay">
+
+            <!-- Inicio de la Toolbar -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/ToolbarPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!-- Fin de la Toolbar -->
+
+        </android.support.design.widget.AppBarLayout>
+        <!-- Fin de la AppBar -->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <TableLayout
+                android:id="@+id/menuPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF"
+                android:padding="0dp"
+                android:stretchColumns="*"
+                android:weightSum="5">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_main_route"
+                            android:background="@color/primary_medium"/>
+
+                        <Button
+                            android:id="@+id/btnRutas"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.2dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/background_btn_main"
+                            android:gravity="center"
+                            android:elevation="3dp"
+                            android:textColor="@color/primary"
+                            android:textSize="30sp"
+                            android:text="Rutas"/>
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_main_favourite"
+                            android:background="@color/primary_medium"/>
+
+                        <Button
+                            android:id="@+id/btnMisParadas"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.2dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/background_btn_main"
+                            android:gravity="center"
+                            android:elevation="3dp"
+                            android:textColor="@color/primary"
+                            android:textSize="30sp"
+                            android:text="Mis Paradas"/>
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_main_timtable"
+                            android:background="@color/primary_medium"/>
+
+                        <Button
+                            android:id="@+id/btnHorarios"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.2dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/background_btn_main"
+                            android:gravity="center"
+                            android:elevation="3dp"
+                            android:textColor="@color/primary"
+                            android:textSize="30sp"
+                            android:text="Horarios"/>
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_main_alert"
+                            android:background="@color/primary_medium"/>
+
+                        <Button
+                            android:id="@+id/btnAlertas"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.2dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/background_btn_main"
+                            android:gravity="center"
+                            android:elevation="3dp"
+                            android:textColor="@color/primary"
+                            android:textSize="30sp"
+                            android:text="Alertas"/>
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_main_plane"
+                            android:background="@color/primary_medium"/>
+
+                        <Button
+                            android:id="@+id/btnPlano"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.2dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/background_btn_main"
+                            android:gravity="center"
+                            android:elevation="3dp"
+                            android:textColor="@color/primary"
+                            android:textSize="30sp"
+                            android:text="Plano"/>
+
+                    </LinearLayout>
+
+                </TableRow>
+
+            </TableLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/recyclerHoraSalidaLlegada"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:textAppearance="@style/textWayBus"
+            android:text="Hora Salida"
+            android:gravity="center_horizontal"
+            android:background="@color/primary_medium"/>
+
+        <TextView
+            android:id="@+id/recyclerDuracion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25"
+            android:textAppearance="@style/textWayBus"
+            android:text="Duración"
+            android:gravity="center_horizontal"
+            android:background="@color/primary_medium"/>
+
+        <TextView
+            android:id="@+id/recyclerPrecio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/textWayBus"
+            android:text="Precio"
+            android:gravity="center_horizontal"
+            android:background="@color/primary_medium"/>
+
+        <TextView
+            android:id="@+id/recyclerDiasSemana"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25"
+            android:textAppearance="@style/textWayBus"
+            android:text="Dias Semana"
+            android:gravity="center_horizontal"
+            android:background="@color/primary_medium"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/primary_light"/>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CoordinadorLayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Inicio de la AppBar -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/AppBarPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/MiTema.AppBarOverlay">
+
+        <!-- Inicio de la Toolbar -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/ToolbarPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/primary"/>
+        <!-- Fin de la Toolbar -->
+
+    </android.support.design.widget.AppBarLayout>
+    <!-- Fin de la AppBar -->
+
+    <include layout="@layout/hor_fragment_horarios" />
+
+</android.support.design.widget.CoordinatorLayout>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.acer.waybus">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_waybus"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/miTemaWayBus">
+        <activity android:name="com.example.acer.waybus.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Rutas.viewRutas"></activity>
+        <activity android:name=".Rutas.viewRutasDetalle"></activity>
+        <activity android:name=".Horarios.viewHorarios"></activity>
+        <activity android:name=".MisParadas.viewMisParadas"></activity>
+        <activity android:name=".Avisos.viewAvisos"></activity>
+        <activity android:name=".Plano.Activity_Plano"></activity>
+
+        <receiver android:name=".Avisos.Fragment_Avisos_Receiver"></receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC9ozPFDGA9AU9DyxGnmdgWRzpUNL8W-og" />
+    </application>
+
+</manifest>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filaTabLineas"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/cardview_vertical_margin"
+    android:theme="@style/cardViewWayBus">
+
+    <RelativeLayout
+        android:id="@+id/linearRuta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/contentRutas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:id="@+id/relParadas"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                    android:id="@+id/imgBusLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/icon_bus_line"/>
+
+                <TextView
+                    android:id="@+id/numParada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/background_tv_cardview"
+                    android:text="@string/txtNumBus"
+                    android:textSize="11sp"
+                    android:textAppearance="@style/textWayBus"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_toRightOf="@+id/imgBusLine"
+                    android:elevation="2dp"
+                    android:background="@color/primary" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relTableRutas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/relParadas">
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/nomRuta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:text="@string/txtNomRuta"
+                            android:textSize="20sp"
+                            android:textAppearance="@style/textWayBus"
+                            android:shadowColor="@color/primary_dark"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="2"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/nomEstacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txtNumBus"
+                            android:textAppearance="@style/textWayBus"
+                            android:textColor="@color/primary_light"/>
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relDetalles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right">
+
+                <CheckBox
+                    android:id="@+id/checkFavourite"
+                    android:layout_width="70dp"
+                    android:layout_height="65dp"
+                    android:button="@drawable/check_favourite"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleX="0.50"
+                    android:scaleY="0.50" />
+
+                <View
+                    android:id="@+id/separatorSecond"
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center|right"
+                    android:elevation="2dp"
+                    android:background="@color/primary"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/checkFavourite" />
+
+                <ImageButton
+                    android:id="@+id/butRutaDetalle"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/separatorSecond"
+                    android:background="@drawable/background_tv_cardview"
+                    android:src="@mipmap/ic_arrow5" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relSeparatorBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <View
+                    android:id="@+id/separator_hor"
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignTop="@+id/arrowBottom"
+                    android:elevation="2dp"
+                    android:background="@drawable/gradient_line" />
+
+                <ImageButton
+                    android:id="@+id/arrowBottom"
+                    android:layout_width="16dp"
+                    android:layout_height="12dp"
+                    android:layout_centerHorizontal="true"
+                    android:focusableInTouchMode="false"
+                    android:src="@drawable/icon_arrow_bottom" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relTableHorarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contentRutas">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/tableHorarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:scrollbars="vertical" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

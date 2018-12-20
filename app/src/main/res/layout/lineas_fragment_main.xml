@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linear_fragment_main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvOrigenUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="0dp"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/primary_medium"
+            android:shadowColor="@color/primary_medium"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:visibility="gone"
+            android:textAppearance="@style/title_prox_rutas"
+            android:text="Fecha"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/reciclador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtFechaHoy"
+            android:padding="3dp"
+            android:layout_marginTop="0dp"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordDetalle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Inicio de la AppBar -->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/AppBarPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/MiTema.AppBarOverlay">
+
+            <!-- Inicio de la Toolbar -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/ToolbarPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!-- Fin de la Toolbar -->
+
+        </android.support.design.widget.AppBarLayout>
+        <!-- Fin de la AppBar -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/primary_medium">
+
+            <RelativeLayout
+                android:id="@+id/relTitular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@color/primary_medium">
+
+                <ImageView
+                    android:id="@+id/imgBusIda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:src="@mipmap/ic_bus_detail"
+                    android:background="@color/primary_medium"/>
+
+                <TextView
+                    android:id="@+id/tituloRuta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignWithParentIfMissing="false"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/imgBusIda"
+                    android:gravity="bottom"
+                    android:shadowColor="@color/primary_light"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/tituloRuta"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="24dp"
+                    android:background="@color/primary_medium"/>
+
+                <View
+                    android:id="@+id/divider_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/imgBusIda"
+                    android:background="@color/primary_light" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relTableHorDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_below="@id/relTitular"
+                android:background="@color/primary_medium">
+
+                <TableLayout
+                    android:id="@+id/tabHorarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:stretchColumns="*"
+                    android:background="@color/primary_medium">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="5"
+                        android:background="@color/primary_medium">
+
+                        <TextView
+                            android:id="@+id/colHoraSalidaLlegada"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:theme="@style/column_table_horario"
+                            android:text="@string/colHoraSalida" />
+
+                        <TextView
+                            android:id="@+id/colDuracion"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.25"
+                            android:theme="@style/column_table_horario"
+                            android:text="@string/colDuracion"/>
+
+                        <TextView
+                            android:id="@+id/colPrecio"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:theme="@style/column_table_horario"
+                            android:text="@string/colPrecio"/>
+
+                        <TextView
+                            android:id="@+id/colDiasSemana"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.25"
+                            android:theme="@style/column_table_horario"
+                            android:text="@string/colFrecuencia"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/msgVacio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/msg_horario_vacio"
+                            android:text="@string/msg_horario_vacio"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_span="5" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="5">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerTableHorarios"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/msgVacio"
+                            android:padding="3dp"
+                            android:scrollbars="vertical"
+                            android:layout_span="5"
+                            android:background="@color/primary_medium"
+                            android:clickable="true" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLineaEstacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relTableHorDetalle"
+                android:layout_margin="5dp"
+                android:background="@color/primary_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/primary_medium">
+
+                    <TextView
+                        android:id="@+id/nomLinea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/textWayBus"
+                        android:background="@color/primary_medium"/>
+
+                    <TextView
+                        android:id="@+id/nomEstacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/textWayBus"
+                        android:background="@color/primary_medium"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relLineaEstacion"
+                android:layout_margin="5dp"
+                android:background="@color/primary_medium">
+
+                <fragment
+                    android:id="@+id/plano"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

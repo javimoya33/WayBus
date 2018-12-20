@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string-array name="valores_frecuencia">
+
+        <item>Sólo una vez</item>
+        <item>Diariamente</item>
+        <item>Semanalmente</item>
+
+    </string-array>
+
+</resources>
